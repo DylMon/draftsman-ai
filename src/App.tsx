@@ -1,12 +1,12 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Layout from './components/Layout';
-import Home from './pages/Home';
-import About from './pages/About';
-import News from './pages/News';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Layout from "./components/Layout";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import News from "./pages/News";
 
-function App() {
+export default function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/draftsman-ai">
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
@@ -18,4 +18,3 @@ function App() {
   );
 }
 
-export default App;
